@@ -5,5 +5,13 @@
         "category": "Backend",
         "status": "completed",
         "created_at": "2026-09-01 00:14:48"
+    },
+    {
+        "id": 2,
+        "task": "Submit software engineering assignment",
+        "category": "University",
+        "status": "pending",
+        "created_at": "2026-09-01 01:13:25",
+        "due_date": "2026-09-15"
     }
 ]

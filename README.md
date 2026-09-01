@@ -1,26 +1,25 @@
-# 📝 CLI Task Manager
+# 📝 Advanced CLI Task Manager
 
-A lightweight, efficient Command-Line Interface (CLI) application built in Python for managing daily tasks. This tool allows users to add, view, and delete tasks directly from the terminal, with all data persistently stored in a local JSON file. 
+A robust, efficient Command-Line Interface (CLI) application built in Python for managing daily tasks and workflows. This tool moves beyond basic CRUD operations by integrating time management, categorization, data export and Docker containerization.
 
-Designed with simplicity and speed in mind, it demonstrates fundamental backend operations, file handling, and command-line argument parsing.
+All data is persistently stored in a local JSON file, ensuring quick execution without the overhead of a heavy database system.
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-*   **Add Tasks:** Quickly insert new tasks with automated ID generation.
-*   **View Tasks:** Display a cleanly formatted list of all current tasks.
-*   **Delete Tasks:** Remove completed or obsolete tasks using their unique ID.
-*   **Persistent Storage:** Tasks are automatically saved to `tasks.json`, ensuring data remains intact between sessions.
-*   **Error Handling:** Graceful handling of missing files, empty task lists, and invalid arguments.
+*   **Smart Task Tracking:** Add tasks with customizable categories and optional due dates.
+*   **Time Management:** Automatically flags overdue tasks and tracks completion status.
+*   **Search & Filtering:** Quickly locate specific tasks by keyword or category.
+*   **Data Export:** Export your entire task history to a `.csv` file for analysis in Excel or Power BI.
+*   **Containerized Execution:** Fully dockerized for isolated, dependency-free execution on any machine.
 
 ## 🛠️ Core Tech Stack
 
 *   **Language:** Python 3.x
-*   **Data Storage:** JSON (JavaScript Object Notation)
-*   **Libraries:** `argparse` (Standard Library), `json` (Standard Library), `os` (Standard Library)
-
----
+*   **Data Storage:** JSON (Local Database), CSV (Export)
+*   **Libraries:** `argparse`, `json`, `csv`, `datetime`, `os` (All Standard Library)
+*   **DevOps:** Docker
 
 ## 💻 Installation & Setup
 
