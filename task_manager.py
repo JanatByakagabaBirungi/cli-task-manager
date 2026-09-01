@@ -6,7 +6,7 @@ from datetime import datetime
 
 FILE_NAME = 'tasks.json'
 
-def load_tasks():
+def load_tasks() -> list[dict]:
     if not os.path.exists(FILE_NAME):
         return []
     with open(FILE_NAME, 'r') as file:
@@ -15,11 +15,11 @@ def load_tasks():
         except json.JSONDecodeError:
             return []
 
-def save_tasks(tasks):
+def save_tasks(tasks: list[dict]) -> None:
     with open(FILE_NAME, 'w') as file:
         json.dump(tasks, file, indent=4)
 
-def add_task(description, category="General", due_date=None):
+def add_task(description: str, category: str = "General", due_date: str | None = None) -> None:
     tasks = load_tasks()
     new_id = max([t['id'] for t in tasks], default=0) + 1
     
@@ -44,7 +44,7 @@ def add_task(description, category="General", due_date=None):
     save_tasks(tasks)
     print(f"✅ Task added: '{description}' in category '{category}'")
 
-def view_tasks(show_all=False):
+def view_tasks(show_all: bool = False) -> None:
     tasks = load_tasks()
     if not tasks:
         print("No tasks found.")
@@ -70,7 +70,7 @@ def view_tasks(show_all=False):
         print(f"[{t['id']}] {status_icon} ({t['category']}) {t['task']}{due_info}")
     print("------------------\n")
 
-def search_tasks(query):
+def search_tasks(query: str) -> None:
     tasks = load_tasks()
     query = query.lower()
     
@@ -86,7 +86,7 @@ def search_tasks(query):
         print(f"[{t['id']}] {status_icon} ({t['category']}) {t['task']}")
     print("------------------------------------\n")
 
-def complete_task(task_id):
+def complete_task(task_id: int) -> None:
     tasks = load_tasks()
     found = False
     for t in tasks:
@@ -101,7 +101,7 @@ def complete_task(task_id):
     else:
         print(f"⚠️ No task found with ID {task_id}.")
 
-def export_tasks_to_csv():
+def export_tasks_to_csv() -> None:
     tasks = load_tasks()
     if not tasks:
         print("No tasks to export.")
@@ -116,7 +116,7 @@ def export_tasks_to_csv():
             
     print(f"📊 Tasks successfully exported to {csv_file}.")
 
-def delete_task(task_id):
+def delete_task(task_id: int) -> None:
     tasks = load_tasks()
     filtered_tasks = [t for t in tasks if t['id'] != task_id]
     
