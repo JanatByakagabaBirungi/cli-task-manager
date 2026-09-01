@@ -1,6 +1,6 @@
 {
     "name": "CLI Task Manager Dev Env",
-    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "image": "mcr.microsoft.com/devcontainers/python:3.13-trixie",
     "customizations": {
         "vscode": {
             "extensions": [
