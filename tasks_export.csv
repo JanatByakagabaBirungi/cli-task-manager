@@ -1,2 +1,3 @@
-ID,Task,Category,Status,Created At
-1,Update MongoDB database connection,Backend,completed,2026-09-01 00:14:48
+ID,Task,Category,Status,Created At,Due Date
+1,Update MongoDB database connection,Backend,completed,2026-09-01 00:14:48,None
+2,Submit software engineering assignment,University,pending,2026-09-01 01:13:25,2026-09-15
