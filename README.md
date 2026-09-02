@@ -25,5 +25,5 @@ All data is persistently stored in a local JSON file, ensuring quick execution w
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/JanatByakagabaBirungi/cli-task-manager(https://github.com/YOUR_USERNAME/cli-task-manager.git)
+   git clone [https://github.com/JanatByakagabaBirungi/cli-task-manager.git](https://github.com/JanatByakagabaBirungi/cli-task-manager.git)
    cd cli-task-manager
